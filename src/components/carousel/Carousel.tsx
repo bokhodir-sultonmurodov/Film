@@ -55,7 +55,7 @@ const Carousel: FC<CarouselProps> = () => {
             <div
               key={movie.id}
               onClick={() => setCurrentIndex(i)}
-              className={`cursor-pointer rounded-full p-1 transition-all duration-300 ${i === currentIndex ? "bg-[#1D1D1D] translate-y-1" : "bg-transparent"
+              className={`cursor-pointer rounded-full p-1 transition-all duration-300 ${i === currentIndex ? " translate-y-1" : "bg-transparent"
                 }`}
             >
               <img

@@ -33,7 +33,6 @@ const Header = () => {
                     : "text-gray-900 dark:text-[#A1A1A1]"
                 }`
               }
-              aria-label="Home"
             >
               <FiHome />
             </NavLink>
@@ -48,7 +47,6 @@ const Header = () => {
                     : "text-gray-900 dark:text-[#A1A1A1]"
                 }`
               }
-              aria-label="Movies"
             >
               <FiFilm />
             </NavLink>
@@ -56,7 +54,7 @@ const Header = () => {
           <li>
             <button
               onClick={handleTheme}
-              aria-label="Toggle Dark Mode"
+             
               className="cursor-pointer  p-2 rounded-lg flex items-center justify-center"
             >
               {darkMode ? (
@@ -69,7 +67,7 @@ const Header = () => {
         </ul>
 
         <div className="flex items-center gap-2 text-2xl text-gray-900 dark:text-[#A1A1A1]">
-          <FiLogIn className="cursor-pointer hover:text-[#C61F1F] dark:hover:text-[#C61F1F] transition-colors duration-300" aria-label="Sign in" />
+          <FiLogIn className="cursor-pointer hover:text-[#C61F1F] dark:hover:text-[#C61F1F] transition-colors duration-300"  />
         </div>
       </nav>
     </header>

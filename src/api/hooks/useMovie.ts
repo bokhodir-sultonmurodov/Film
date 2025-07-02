@@ -7,7 +7,7 @@ export const useMovie = () => {
       queryKey: ["movie", params],
       queryFn: () =>
         api
-          .get("discover/movie", { params }) // token avtomatik qo‘shiladi
+          .get("discover/movie", { params }) 
           .then((res) => res.data),
     });
 
@@ -16,9 +16,9 @@ export const useMovie = () => {
       queryKey: ["movie", id],
       queryFn: () =>
         api
-          .get(`movie/${id}`) // token orqali authorized
+          .get(`movie/${id}`) 
           .then((res) => res.data),
-      enabled: !!id,
+     
     });
 
   return { getMovies, getMovieById };

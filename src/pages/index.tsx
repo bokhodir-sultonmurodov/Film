@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { useRoutes } from "react-router-dom";
+import Error from "./error/Error";
 
 const Layout = lazy(() => import("./layout/Layout"));
 const Home = lazy(() => import("./home/Home"));
@@ -23,6 +24,10 @@ const MainRouter = () => {
         {
           path: "/movie/:id",
           element: <Detail/>,
+        },
+        {
+          path: "/*",
+          element: <Error/>,
         }
       ],
     },

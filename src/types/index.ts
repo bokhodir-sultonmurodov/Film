@@ -9,6 +9,7 @@ export interface IMovie{
     overview:string,
     vote_count:number,
     original_language:string,
+    genres:any
 }
 
 export interface IGenre {

@@ -19,11 +19,10 @@ const Detail = () => {
   if (error)
     return (
       <div className="text-center py-10 text-red-500 text-lg">
-        Failed to load data
+        Try later
       </div>
     );
 
-  if (!product) return null;
 
   const {
     original_title,
@@ -38,10 +37,9 @@ const Detail = () => {
   } = product;
 
   return (
-    <div className="container max-w-6xl mx-auto p-6 bg-white dark:bg-[#121212] transition-colors duration-500">
+    <div className="container max-w-6xl mx-auto p-6 bg-white dark:bg-[#121212]">
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Poster Image */}
-        <div className="flex-shrink-0 w-full md:w-1/3 rounded-lg overflow-hidden shadow-md border border-gray-200 dark:border-gray-700">
+        <div className=" w-full md:w-1/3 rounded-lg overflow-hidden  border border-gray-200 dark:border-gray-700">
           <img
             src={IMAGE_URL + poster_path}
             alt={original_title}
@@ -90,7 +88,7 @@ const Detail = () => {
                     key={company.id}
                    src={IMAGE_URL + company.logo_path}
                     alt={company.name}
-                    className="h-12 object-contain grayscale hover:grayscale-0 transition duration-300"
+                    className="h-10 object-contain "
                     loading="lazy"
                     title={company.name}
                   />
