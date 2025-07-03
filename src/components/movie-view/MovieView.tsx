@@ -2,7 +2,6 @@ import { IMAGE_URL } from "@/const";
 import type { IMovie } from "@/types";
 import React, { type FC } from "react";
 import { FaStar } from "react-icons/fa";
-import { BiWorld } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { FiBookmark } from "react-icons/fi"; 
 
@@ -66,6 +65,7 @@ const MovieView: FC<Props> = ({ data, loading, count }) => {
             <FiBookmark className="text-[24px] absolute top-3 right-3 cursor-pointer text-gray-300 hover:text-gray-400ey- transition" />
             
             <div className="p-4">
+              <p>{movie.release_date.slice(0,4)}</p>
               <h3
                 title={movie.title}
                 className="text-[24px] font-semibold line-clamp-1 text-black dark:text-white"
@@ -77,10 +77,10 @@ const MovieView: FC<Props> = ({ data, loading, count }) => {
                   <FaStar className="text-yellow-400" />
                   {movie.vote_average.toFixed(1)} 
                 </span>
-                <span className="flex items-center gap-1">
+                {/* <span className="flex items-center gap-1">
                   <BiWorld className="align-middle" />
                   <span className="leading-none">{movie.original_language}</span>
-                </span>
+                </span> */}
               </div>
             </div>
           </div>

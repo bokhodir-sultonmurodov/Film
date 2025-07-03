@@ -4,6 +4,7 @@ import type { IMovie } from "@/types";
 import { useMovie } from "@/api/hooks/useMovie";
 import next from "@/assets/Vector.png"
 import prev from "@/assets/Vector (1).png"
+import { useNavigate } from "react-router-dom";
 interface CarouselProps {
   data: undefined | IMovie[];
 }
@@ -22,7 +23,7 @@ const Carousel: FC<CarouselProps> = () => {
   const nextSlide = (): void => {
     setCurrentIndex((prev) => (prev + 1) % movies.length);
   };
-
+  const navigate = useNavigate()
   return (
     <div className="w-full container mx-auto space-y-4 mb-6 relative">
 
@@ -83,6 +84,20 @@ const Carousel: FC<CarouselProps> = () => {
         </button>
 
       </div>
+     <div className="flex justify-end mb-4">
+  <button
+    onClick={() => navigate("/movies")}
+    className="cursor-pointer flex items-center gap-2 text-sm md:text-base font-medium text-black dark:text-[#C61F1F] hover:underline"
+  >
+    View All
+    <img
+      src={next}
+      alt="Next icon"
+      className="w-4 h-4 object-contain"
+    />
+  </button>
+</div>
+
     </div>
   );
 };
